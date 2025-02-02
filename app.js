@@ -1,22 +1,35 @@
-//O principal objetivo deste desafio é fortalecer suas habilidades em lógica de programação. Aqui você deverá desenvolver a lógica para resolver o problema.
-let listaAmigos = [];
-let amigoSecret = escolherAmigoAleatorio();
+let amigos = [];
 
+function adicionarAmigo() {
+    const amigoInput = document.getElementById("amigo");
+    const amigo = amigoInput.value.trim();
 
-const botaoSortear = document.querySelector('#sortear');
-const resultado = document.querySelector('#resultado');
+    if (amigo !== "") {
+        amigos.push(amigo);
+        amigoInput.value = "";
+        atualizarLista();
+    } else {
+        alert("Por favor, insira um nome válido.");
+    }
+}
 
-botaoSortear.addEventListener('click', function() {
-    const inputNomes = document.querySelector('#nomes').value;
+function atualizarLista() {
+    const listaAmigos = document.getElementById("listaAmigos");
+    listaAmigos.innerHTML = "";
 
-    const listaNomes = inputNomes.split(',').map(nome => nome.trim()).filter(nome => nome !== '');
+    amigos.forEach((amigo) => {
+        const li = document.createElement("li");
+        li.textContent = amigo;
+        listaAmigos.appendChild(li);
+    });
+}
 
-    if (listaNomes.length === 0) {
-        resultado.textContent = 'Por favor, digite ao menos um nome válido.';
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("Adicione amigos à lista para realizar o sorteio.");
         return;
-      }
+    }
 
-      const nomeSorteado = listaNomes[Math.floor(Math.random() * listaNomes.length)];
-
-      resultado.textContent = `O nome sorteado foi: 🎉 ${nomeSorteado} 🎉`;
-});
+    const resultado = amigos[Math.floor(Math.random() * amigos.length)];
+    document.getElementById("resultado").textContent = `O amigo sorteado é: ${resultado}`;
+}
