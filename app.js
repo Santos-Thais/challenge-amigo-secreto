@@ -5,9 +5,14 @@ function adicionarAmigo() {
     const amigo = amigoInput.value.trim();
 
     if (amigo !== "") {
+        if (amigos.length > 0 && amigos.includes(amigo)) { 
+            alert("Esse amigo já está na lista.");
+            return;
+        }
         amigos.push(amigo);
         amigoInput.value = "";
         atualizarLista();
+        document.getElementById("resultado").textContent = "";
     } else {
         alert("Por favor, insira um nome válido.");
     }
