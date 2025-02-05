@@ -21,3 +21,6 @@ Esta aplicação permite aos usuários inserir nomes de amigos em uma lista para
 
 [Clique aqui para abrir a aplicação] (http://127.0.0.1:5500/index.html)
 
+![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20ÚLTIMOS_AJUSTES&color=GREEN&style=for-the-badge)
+
+
