@@ -73,7 +73,7 @@ function sortearAmigo() {
 ```
 
 ### 🔗 Acesso ao projeto
-Aplicação do site [Sorteio do Amigo Secreto](https://thaissantosp.github.io/challenge-amigo-secreto/).
+Aplicação do site [Sorteio do Amigo Secreto](https://santos-thais.github.io/challenge-amigo-secreto/).
 
 ### 🎁 Para utilizar sigas os passos:
 1. Digitar um nome
